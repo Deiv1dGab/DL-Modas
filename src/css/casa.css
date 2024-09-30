@@ -1,0 +1,61 @@
+
+.mCasa {
+    width: 100%;
+    margin-top: 5.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+  
+  .propaganda {
+    display: flex;
+    height: 90%;
+    min-height: 412px;
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+  }
+  
+  .amostra {
+    display: contents;
+  }
+  
+  .exib {
+    align-self: center;
+    width: 100%;
+    max-width: 1100px;
+    position: relative;
+  }
+  
+  .carrosel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 2.5em;
+    margin-right: 0;
+  }
+  
+  /* Responsividade */
+  @media screen and (max-width: 1065px) {
+    .carrosel {
+      gap: 0.5em;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .carrosel {
+      grid-auto-columns: calc((100% / 2) - 11px);
+      gap: 0.5em;
+      margin-right: 0;
+    }
+    .carrosel > *:nth-child(3) {
+      display: none; /* Oculta o terceiro card */
+    }
+  }
+  @media screen and (max-width:514px){
+    .propaganda {
+      min-height: 320px;
+      height: 75%;
+    }
+  }

@@ -1,0 +1,189 @@
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    max-height: 53px;
+    gap: 1rem;
+}
+
+.topo2 {
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    min-height: 30px;
+}
+.menu{
+padding-left: 2em;
+}
+.Menu{
+    height: 39px;
+    width: 4.5em;
+    cursor: pointer;
+}
+.Menu:hover{
+color: gray;
+}
+.cIcon, .pIcon, .dIcon{
+    height: 39px;
+    width: 39px;
+    cursor: pointer;
+}
+.cIcon:hover, .pIcon:hover, .dIcon:hover{
+    color: gray;
+}
+.logo{
+    padding: 1em;
+    max-width: 200px;
+    height: 51px;
+    display: flex;
+}
+
+.logo img {
+    width: 154px;
+    height: 51px;
+    object-fit: cover;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: clamp(30px, 52%, 670px);
+    height: 28px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.1);
+    border: 1px solid gray;
+    padding: 8px 12px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    margin: 0 20px;
+}
+.pesquisa input{
+    outline: none;
+    border: none;
+    width: 92%;
+}
+.searchIcon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.searchIcon:hover {
+    color: gray;
+}
+
+.desejo, .carri, .per{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1rem;
+    width: clamp(30px,32%,208px);
+    height: 48px;
+    gap: 4.5px;
+}
+.per{
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+.desejo span, .carri span, .per span{
+    cursor: pointer;
+    transition: font-size 0.2s ease, text-decoration 0.2s ease;
+}
+.desejo span:hover, .carri span:hover, .per span:hover{
+    font-size: 1.04rem;
+    text-decoration: underline;
+}
+
+/* Topo 2*/
+
+.categorias {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1rem;
+}
+
+.cats {
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    min-height: 30px;
+    cursor: pointer; 
+
+    transition: font-size 0.2s ease, text-decoration 0.2s ease; /* Transição suave */
+}
+.cats:hover{
+    font-size: 1.04rem;
+    text-decoration: underline;
+}
+/*Responsividade*/
+
+@media (max-width: 320px) {
+    .menu, .desejo, .carri, .perfil{
+      padding-right:0.3rem ;
+      width: 3rem;
+    }
+  }
+@media screen and (max-width: 362px) {
+    .logo img{
+      display: none;
+    }
+  }
+
+@media screen and (max-width:671px) {
+    .topo{
+        gap: 0.5rem;
+    }
+    .logo{
+        max-width: 170px;
+        max-height: 45px;
+        padding-top: 0.2em;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+    }
+    .topo2{
+        min-height: 29px;
+    }
+    .categorias{
+        justify-content: normal;
+    }
+    .menu{
+        padding-right: 0.2em;
+        padding-left: 0.2em;
+    }
+    .menu, .Menu, .cIcon, .pIcon, .dIcon{
+        display: flex;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+    .pesquisa{
+        max-width: 50px;
+        border: none;
+        border-radius: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+    .pesquisa input,.desejo span, .carri span, .per span{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width:1600px) {
+    .topo{
+        justify-content: space-evenly;
+    }
+}
+

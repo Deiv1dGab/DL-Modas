@@ -1,0 +1,111 @@
+.ori{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.accor{
+    display: none;
+}
+.Clientes, .Sobre, .Redes{
+    display: flex;
+    flex-direction: column;
+}
+.Clientes{
+    min-width: 250px;
+}
+.Sobre{
+    min-width: 189px;
+}
+.Clientes h2, .Sobre h2{
+    text-align: left;
+    margin: 0;
+}
+ .Redes h2{
+    text-align: center;
+    margin-top: -0.2rem;
+    margin: 0;
+}
+.linksA, .linksN{
+    text-align: left;
+    font-size: 1.2em;
+    color: gray;
+    cursor: pointer;
+}
+.Pagamentos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.Pagamentos h2{
+    margin: 0px 0px 0px 0px;
+}
+.linksR{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+.linksA, .linksN, .linksR{
+    transition: font-size 0.2s ease, text-decoration 0.2s ease;
+    width: fit-content;
+}
+.linksA:hover, .linksN:hover, .linksR:hover{
+    text-decoration: underline; 
+}
+.rIcon{
+    width: 30px;
+    height: 30px;
+}
+.pagas{
+    display: contents;
+    padding-left: 0.2rem;
+} /*fazer o accordion*/
+@media screen and (max-width: 864px) {
+    .ori{
+      display: none;
+    }
+    .accor{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        height: auto;
+    }
+    .a-Clientes,.a-Sobre, .a-Redes{
+        margin: 0px;
+        width: 100%;
+    }
+    
+    .ab{    
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+    }
+    .a-Redes h2, .a-Clientes h2, .a-Sobre h2, .a-Pagamentos h2{
+        text-align: left;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .arrow{
+        width: 18px;
+        height: 18px;
+        margin-top: 0.3em;
+        transition: transform 0.3s ease; /* Transição suave da seta */
+    }
+      /* Setinha para baixo quando fechado e para cima quando aberto */
+    .accordion-open .arrow {
+        transform: rotate(90deg); /* Rotaciona a seta para a esquerda */
+    }
+    .linksA, .linksN, .linksR {
+        transition: max-height 0.3s ease-out; /* Transição suave */
+        max-height: 0; /* Accordion fechado por padrão */
+        overflow: hidden;
+    }
+    .accordion-open .linksA, 
+    .accordion-open .linksN, 
+    .accordion-open .linksR {
+        max-height: 500px; /* Defina um valor que cubra o conteúdo */
+        transition: max-height 0.3s ease-in;
+  }
+    
+  }

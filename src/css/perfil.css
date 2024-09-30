@@ -1,0 +1,77 @@
+  .perfil{
+    width: 100%;
+    margin-top: 5.2rem;
+    min-height: 31.4rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+  }
+  label{
+    align-self: baseline;
+  }
+  input{
+    width: 90%;
+  }
+  .login, .cadastro, .logado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cadastro, .login{
+    border-radius: 7%;
+    border: gray 1px solid;
+    padding: 1em;
+  }
+  .cadastro{
+    margin-top: 1.5rem;
+  }
+  a:hover{
+  text-decoration: underline;
+  }
+  .icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    display: block;
+    width: 19rem;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+  }
+  
+  .login-button, .cadastro-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  .logado{
+    width: 15em;
+  }
+  
+  .login-button:disabled, .cadastro-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .login-section, .cadastro-section, .perfil-logado-section {
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 380px) {
+    .input-field{
+      width: 12rem;
+    }
+  }
